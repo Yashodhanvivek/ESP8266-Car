@@ -35,16 +35,7 @@ void move_fwd()
 
       digitalWrite(motor_right[0], HIGH);
       digitalWrite(motor_right[1], LOW);
-  
-//   digitalWrite(left,HIGH);
-//   digitalWrite(right,LOW);  
-//   digitalWrite(fwd,HIGH);
-//   digitalWrite(rev,LOW); 
-//   delay(1000);
-//   digitalWrite(left,LOW);
-//   digitalWrite(right,LOW);
-//   digitalWrite(fwd,LOW);
-//   digitalWrite(rev,LOW);
+
   
  }
 
@@ -55,15 +46,7 @@ void move_fwd()
 
      digitalWrite(motor_right[0], HIGH);
      digitalWrite(motor_right[1], LOW);
-//   digitalWrite(left,HIGH);
-//   digitalWrite(right,LOW);  
-//   digitalWrite(fwd,LOW);
-//   digitalWrite(rev,LOW); 
-//   delay(1000);
-//   digitalWrite(left,LOW);
-//   digitalWrite(right,LOW);
-//   digitalWrite(fwd,LOW);
-//   digitalWrite(rev,LOW);
+
   
  }
 
@@ -74,15 +57,7 @@ void move_fwd()
 
      digitalWrite(motor_right[0], LOW);
      digitalWrite(motor_right[1], HIGH);
-//   digitalWrite(left,HIGH);
-//   digitalWrite(right,LOW);  
-//   digitalWrite(fwd,HIGH);
-//   digitalWrite(rev,LOW); 
-//   delay(1000);
-//   digitalWrite(left,LOW);
-//   digitalWrite(right,LOW);
-//   digitalWrite(fwd,LOW);
-//   digitalWrite(rev,LOW);
+
   
  }
 
@@ -93,15 +68,7 @@ void move_reverse()
     
     digitalWrite(motor_right[0], LOW);
     digitalWrite(motor_right[1], HIGH);
-//      digitalWrite(left,LOW);
-//     digitalWrite(right,HIGH);  
-//     digitalWrite(fwd,LOW);
-//     digitalWrite(rev,HIGH); 
-//     delay(1000);
-//     digitalWrite(left,LOW);
-//     digitalWrite(right,LOW);
-//     digitalWrite(fwd,LOW);
-//     digitalWrite(rev,LOW);
+
  }
 
 
@@ -111,7 +78,7 @@ void handleRoot() {
 }
 
 void handlemotorOn() {
- // statefwd = LOW;
+
   statefwd = HIGH;
   move_fwd();
   response();
@@ -119,7 +86,7 @@ void handlemotorOn() {
 }
 
 void handlemotorRev() {
-  //staterev= LOW;
+ 
   staterev= HIGH;
   move_reverse();
   response();
@@ -127,7 +94,7 @@ void handlemotorRev() {
 }
 
 void handlemotorOff() {
-  //staterev= LOW;
+ 
   stateoff= HIGH;
   move_stop();
   response();
@@ -135,7 +102,7 @@ void handlemotorOff() {
 }
 void handlemotorrightOn()
 {
-   //staterev= LOW;
+  
    stateright = HIGH;
   move_right();
   response();
@@ -144,7 +111,7 @@ void handlemotorrightOn()
 
 void handlemotorleftOn()
 {
-   //staterev= LOW;
+   
    stateleft = HIGH;
   move_left();
   response();
@@ -218,20 +185,10 @@ void setup() {
      {
      pinMode(motor_left[i], OUTPUT);
      pinMode(motor_right[i], OUTPUT);
-    // digitalWrite(motor_left[i], LOW);
-    // digitalWrite(motor_right[i], LOW);
+  
      }
       move_stop();
-    // digitalWrite(motor_left[1], HIGH);
-//    pinMode(LED_BUILTIN, OUTPUT);
-//    pinMode(fwd, OUTPUT);
-//    pinMode(left, OUTPUT);
-//    pinMode(right, OUTPUT);
-//    pinMode(rev, OUTPUT);
-//    digitalWrite(left, LOW);
-//    digitalWrite(fwd,LOW);
-//    digitalWrite(rev,LOW);
-//    digitalWrite(right,LOW);
+
     digitalWrite(LED_BUILTIN, stateLED);
 }
 
